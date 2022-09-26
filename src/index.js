@@ -1,13 +1,13 @@
-import { DateTime } from "../luxon.js";
-import Form from "./components/Form.js";
-import List from "./components/List.js";
-import Contact from "./components/Contact.js";
+import { DateTime } from '../luxon.js';
+import Form from './components/Form.js';
+import List from './components/List.js';
+import Contact from './components/Contact.js';
 
 // get DOM of navigation links
-const navLinks = document.querySelectorAll(".nav-link");
+const navLinks = document.querySelectorAll('.nav-link');
 
 // get DOM of page container
-const container = document.getElementById("app");
+const container = document.getElementById('app');
 
 const defaultData = () => {
   const listData = new List();
@@ -21,20 +21,20 @@ defaultData();
 
 // add event listener to page navigation links
 navLinks.forEach((element) => {
-  const target = element.getAttribute("data-page");
-  element.addEventListener("click", () => {
+  const target = element.getAttribute('data-page');
+  element.addEventListener('click', () => {
     switch (target) {
-      case "list": {
+      case 'list': {
         defaultData();
         break;
       }
-      case "form": {
+      case 'form': {
         const formData = new Form();
         container.innerHTML = formData.content;
         formData.activeFormSubmit();
         break;
       }
-      case "contact": {
+      case 'contact': {
         const contentData = new Contact();
         container.innerHTML = contentData.content;
         break;
@@ -46,9 +46,9 @@ navLinks.forEach((element) => {
   });
 });
 
-const time = document.querySelector(".date");
+const time = document.querySelector('.date');
 const now = DateTime.now();
 
-window.addEventListener("load", () => {
+window.addEventListener('load', () => {
   time.textContent = `${now}`;
 });
