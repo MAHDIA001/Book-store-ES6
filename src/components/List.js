@@ -23,7 +23,7 @@ export default class List {
     return this.content;
   }
 
-  static displayBooks() {
+  static displayBooks = () => {
     const library = document.querySelector('.library');
     let dataStored = [];
     let books = [];
