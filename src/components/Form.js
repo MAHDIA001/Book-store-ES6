@@ -4,10 +4,10 @@ export default class Form {
   constructor() {
     this.content = `
         <section>
-            <form class = "form">
-            <input class="title" type="text" placeholder="book Title" required>
-            <input class="author" type="text" placeholder="Book Author" required>
-            <button type="submit" class="add"> Add </button>
+            <form class = 'form'>
+            <input class='title' type='text' placeholder='book Title' required>
+            <input class='author' type='text' placeholder='Book Author' required>
+            <button type='submit' class='add'> Add </button>
             </form>
         </section>
         `;

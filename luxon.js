@@ -751,7 +751,7 @@ class Formatter {
     const splits = [];
     for (let i = 0; i < fmt.length; i++) {
       const c = fmt.charAt(i);
-      if (c === ''') {
+      if (c === `'`) {
         if (currentFull.length > 0) {
           splits.push({ literal: bracketed, val: currentFull });
         }
@@ -4968,7 +4968,7 @@ function explainFromTokens(locale, input, format) {
         : [null, null, undefined];
     if (hasOwnProperty(matches, 'a') && hasOwnProperty(matches, 'H')) {
       throw new ConflictingSpecificationError(
-        'Can't include meridiem when specifying 24-hour format'
+        `Can't include meridiem when specifying 24-hour format`
       );
     }
     return {
@@ -5838,13 +5838,13 @@ class DateTime {
 
     if ((containsGregor || containsOrdinal) && definiteWeekDef) {
       throw new ConflictingSpecificationError(
-        'Can't mix weekYear/weekNumber units with year/month/day or ordinals'
+        `Can't mix weekYear/weekNumber units with year/month/day or ordinals`
       );
     }
 
     if (containsGregorMD && containsOrdinal) {
       throw new ConflictingSpecificationError(
-        'Can't mix ordinal dates with month/day'
+        `Can't mix ordinal dates with month/day`
       );
     }
 
@@ -6580,13 +6580,13 @@ class DateTime {
 
     if ((containsGregor || containsOrdinal) && definiteWeekDef) {
       throw new ConflictingSpecificationError(
-        'Can't mix weekYear/weekNumber units with year/month/day or ordinals'
+        `Can't mix weekYear/weekNumber units with year/month/day or ordinals`
       );
     }
 
     if (containsGregorMD && containsOrdinal) {
       throw new ConflictingSpecificationError(
-        'Can't mix ordinal dates with month/day'
+        `Can't mix ordinal dates with month/day`
       );
     }
 
@@ -6840,7 +6840,7 @@ class DateTime {
    * @return {string}
    */
   toISOWeekDate() {
-    return toTechFormat(this, 'kkkk-'W'WW-c');
+    return toTechFormat(this, `kkkk-'W'WW-c`);
   }
 
   /**
@@ -6903,7 +6903,7 @@ class DateTime {
    * @return {string}
    */
   toHTTP() {
-    return toTechFormat(this.toUTC(), 'EEE, dd LLL yyyy HH:mm:ss 'GMT'');
+    return toTechFormat(this.toUTC(), 'EEE, dd LLL yyyy HH:mm:ss `GMT`');
   }
 
   /**

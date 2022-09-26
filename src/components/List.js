@@ -2,8 +2,8 @@ export default class List {
   constructor() {
     this.content = `
     <section>
-        <h1 class="h1 invisible">Awesome Books</h1>
-        <div class="books"></div>
+        <h1 class='h1 invisible'>Awesome Books</h1>
+        <div class='books'></div>
         <table>
             <thead>
               <tr>
@@ -12,7 +12,7 @@ export default class List {
                 <th>remove</th>
               </tr>
             </thead>
-            <tbody class="library">
+            <tbody class='library'>
             </tbody>
         </table>
     </section>
@@ -36,7 +36,7 @@ export default class List {
             <td>${element.title}</td>
             <td>${element.author}</td>
             <td>
-                <button class="delete-btn" id=${index}>Remove</button>
+                <button class='delete-btn' id=${index}>Remove</button>
             </td>
         </tr>
         `;
@@ -44,7 +44,7 @@ export default class List {
     } else {
       library.innerHTML += `
         <tr>
-            <td colspan="3"></td>
+            <td colspan='3'></td>
         </tr>
         `;
     }
