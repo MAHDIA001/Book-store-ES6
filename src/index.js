@@ -1,7 +1,7 @@
+import { DateTime } from 'luxon';
 import Form from './components/Form.js';
 import List from './components/List.js';
 import Contact from './components/Contact.js';
-import { DateTime } from "luxon";
 
 // get DOM of navigation links
 const navLinks = document.querySelectorAll('.nav-link');
@@ -14,7 +14,7 @@ const defaultData = () => {
   container.innerHTML = listData.content;
   listData.displayBooks();
   listData.deleteBook();
-}
+};
 
 // load default page
 defaultData();
@@ -45,6 +45,4 @@ navLinks.forEach((element) => {
     }
   });
 });
- 
-const now = DateTime.now();
-document.querySelector(".date").innerHTML = DateTime.now().toString();
+document.querySelector('.date').innerHTML = DateTime.now().toString();
